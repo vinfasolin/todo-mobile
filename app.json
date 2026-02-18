@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "ToDo Premium",
+    "slug": "todo-mobile-web-premium",
+    "owner": "vinfasolin",
+    "scheme": "todo-premium",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0B0F17"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "091ea989-fc6a-40a1-94c3-02c42dba4e1a"
+      }
+    }
+  }
+}
