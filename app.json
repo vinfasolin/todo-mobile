@@ -7,16 +7,49 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0B0F17"
+    },
+    "notification": {
+      "icon": "./assets/notification-icon.png",
+      "color": "#0B0F17"
+    },
     "ios": {
       "supportsTablet": true
     },
     "android": {
+      "package": "com.vinfasolin.todomobilewebpremium",
+      "softwareKeyboardLayoutMode": "resize",
       "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0B0F17"
-      }
+      },
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "category": ["BROWSABLE", "DEFAULT"],
+          "data": [
+            {
+              "scheme": "com.googleusercontent.apps.764728744073-9rd4hscje16a92rete40g5q0r10ggnj1",
+              "pathPrefix": "/oauth2redirect"
+            }
+          ]
+        },
+        {
+          "action": "VIEW",
+          "category": ["BROWSABLE", "DEFAULT"],
+          "data": [
+            {
+              "scheme": "todo-premium",
+              "pathPrefix": "/redirect"
+            }
+          ]
+        }
+      ]
     },
     "web": {
       "bundler": "metro"
@@ -25,6 +58,12 @@
       "eas": {
         "projectId": "091ea989-fc6a-40a1-94c3-02c42dba4e1a"
       }
-    }
+    },
+    "plugins": [
+      "expo-router",
+      "expo-web-browser",
+      "expo-secure-store",
+      "expo-notifications"
+    ]
   }
 }
